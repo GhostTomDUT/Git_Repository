@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}客厅_login{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>欢迎来到会客厅</h1>
+</div>
+<div class="col-md-4">
+    <h1>请输入邮箱，用户名与密码</h1>
+    {{ wtf.quick_form(form) }}
+</div>
+<p>
+    第一次来我家？
+    <a href = "{{ url_for('auth.register') }}">
+        点击这里注册
+    </a>
+</p>
+{% endblock %}

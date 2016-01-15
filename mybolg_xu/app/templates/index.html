@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}徐广昊{% endblock %}
+
+{% block page_content %}
+
+    <div class="page-header">
+    <h1>嘞吼啊,
+        {% if current_user.is_authenticated %}
+            {{ current_user.username }}</h1>
+               <p>老朋友，来，坐</p>
+        {% else %}
+            初次见面的朋友啊</h1>
+            <p>很开心认识你</p>
+        {% endif %}
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}

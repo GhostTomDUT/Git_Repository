@@ -1,0 +1,10 @@
+Dear {{user,username}},
+欢迎来到逸轩阁！
+请点击以下链接以激活您的账户：
+
+{{ url_for('auth.confirm',token= token,_external = True)}}
+
+祝你愉快
+逸轩阁阁主
+徐广昊
+注意：请勿回复此邮件
